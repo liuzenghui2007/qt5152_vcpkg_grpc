@@ -32,10 +32,7 @@ unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_time.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_base.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgpr.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_stacktrace.a
+unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgrpc.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgrpc++.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/*.a
-
-
-
-
 
