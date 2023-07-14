@@ -14,7 +14,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 
-unix:!macx: INCLUDEPATH += $$PWD/vcpkg-libs/installed/x64-linux/include
+
 
 HEADERS += \
     example.grpc.pb.h \
@@ -29,10 +29,17 @@ unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_synchroniza
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_strings.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_symbolize.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_time.a
-unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_base.a
-unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgpr.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_stacktrace.a
+unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libabsl_base.a
+
+
+
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgrpc.a
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgrpc++.a
+unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/libgpr.a
+
+
 unix:!macx: LIBS += $$PWD/vcpkg-libs/installed/x64-linux/lib/*.a
 
+
+unix:!macx: INCLUDEPATH += $$PWD/vcpkg-libs/installed/x64-linux/include
