@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../..
+includedir=${prefix}/../include
+libdir=${prefix}/lib
+
+Name: re2
+Description: RE2 is a fast, safe, thread-friendly regular expression engine.
+Version: 10.0.0
+
+Libs: -pthread "-L${libdir}" -lre2
+Requires: 
+Cflags: -pthread "-I${includedir}"
