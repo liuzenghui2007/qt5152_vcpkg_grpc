@@ -1,4 +1,4 @@
-grpc_root_dir = /home/zenghui/polyseq/qt5152_vcpkg_grpc/vcpkg-libs/installed/x64-linux
+grpc_root_dir = $$PWD/vcpkg-libs/installed/x64-linux
 
 grpc_lib = $${grpc_root_dir}/lib
 

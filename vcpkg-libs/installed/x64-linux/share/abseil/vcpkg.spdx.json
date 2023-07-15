@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/abseil-x64-linux-20230125.3-1ef170c3-73df-499a-ae1e-a67859c9a7b6",
-  "name": "abseil:x64-linux@20230125.3 f49023a7c8b4f94d501bf06bfe0fa91056bfa08a22201efcf016fd044f9c33f6",
+  "documentNamespace": "https://spdx.org/spdxdocs/abseil-x64-linux-20230125.3-4a1a8a10-7c16-4675-8883-bc3c949f9baf",
+  "name": "abseil:x64-linux@20230125.3 62ef91a5ed6675123e98b912f6a3d3e0264696dd329e4e6b0aba6347ff839e51",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-f19f3d9939100085fe2f7e41502d60b08e2083b6"
     ],
-    "created": "2023-07-14T01:10:22Z"
+    "created": "2023-07-15T07:31:43Z"
   },
   "relationships": [
     {
@@ -48,13 +48,13 @@
       "relatedSpdxElement": "SPDXRef-port"
     },
     {
-      "spdxElementId": "SPDXRef-file-0",
-      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
     },
     {
       "spdxElementId": "SPDXRef-file-1",
-      "relationshipType": "CONTAINED_BY",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
       "relatedSpdxElement": "SPDXRef-port"
     },
     {
@@ -84,7 +84,7 @@
     {
       "name": "abseil:x64-linux",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "f49023a7c8b4f94d501bf06bfe0fa91056bfa08a22201efcf016fd044f9c33f6",
+      "versionInfo": "62ef91a5ed6675123e98b912f6a3d3e0264696dd329e4e6b0aba6347ff839e51",
       "downloadLocation": "NONE",
       "licenseConcluded": "Apache-2.0",
       "licenseDeclared": "NOASSERTION",
@@ -108,8 +108,20 @@
   ],
   "files": [
     {
-      "fileName": "./vcpkg.json",
+      "fileName": "./fix-32-bit-arm.patch",
       "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "60794fddcdd62e554126ba98536d6990015be93ce156245dc63a1dd597b31c95"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
           "algorithm": "SHA256",
@@ -121,23 +133,11 @@
     },
     {
       "fileName": "./fix-dll-support.patch",
-      "SPDXID": "SPDXRef-file-1",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9d8c44fb816ef6f1547260391e58d2bfc9af9dc2a44f6874b2a7fb2c45c5bb03"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./fix-32-bit-arm.patch",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "60794fddcdd62e554126ba98536d6990015be93ce156245dc63a1dd597b31c95"
+          "checksumValue": "9d8c44fb816ef6f1547260391e58d2bfc9af9dc2a44f6874b2a7fb2c45c5bb03"
         }
       ],
       "licenseConcluded": "NOASSERTION",
