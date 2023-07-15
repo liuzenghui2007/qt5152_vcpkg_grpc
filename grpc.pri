@@ -12,178 +12,85 @@ HEADERS += $$PWD/example.grpc.pb.h \
 SOURCES += $$PWD/example.grpc.pb.cc \
            $$PWD/example.pb.cc
 
-LIBS += -L$${grpc_lib} -labsl_bad_any_cast_impl
-LIBS += -L$${grpc_lib} -labsl_bad_optional_access
-LIBS += -L$${grpc_lib} -labsl_bad_variant_access
-LIBS += -L$${grpc_lib} -labsl_base
-LIBS += -L$${grpc_lib} -labsl_city
-LIBS += -L$${grpc_lib} -labsl_civil_time
-LIBS += -L$${grpc_lib} -labsl_cord
-LIBS += -L$${grpc_lib} -labsl_cord_internal
-LIBS += -L$${grpc_lib} -labsl_cordz_functions
-LIBS += -L$${grpc_lib} -labsl_cordz_handle
-LIBS += -L$${grpc_lib} -labsl_cordz_info
-LIBS += -L$${grpc_lib} -labsl_cordz_sample_token
-LIBS += -L$${grpc_lib} -labsl_debugging_internal
-LIBS += -L$${grpc_lib} -labsl_demangle_internal
-LIBS += -L$${grpc_lib} -labsl_examine_stack
-LIBS += -L$${grpc_lib} -labsl_exponential_biased
-LIBS += -L$${grpc_lib} -labsl_failure_signal_handler
-LIBS += -L$${grpc_lib} -labsl_flags
-LIBS += -L$${grpc_lib} -labsl_flags_commandlineflag
-LIBS += -L$${grpc_lib} -labsl_flags_commandlineflag_internal
-LIBS += -L$${grpc_lib} -labsl_flags_config
-LIBS += -L$${grpc_lib} -labsl_flags_internal
-LIBS += -L$${grpc_lib} -labsl_flags_marshalling
-LIBS += -L$${grpc_lib} -labsl_flags_parse
-LIBS += -L$${grpc_lib} -labsl_flags_private_handle_accessor
-LIBS += -L$${grpc_lib} -labsl_flags_program_name
-LIBS += -L$${grpc_lib} -labsl_flags_reflection
-LIBS += -L$${grpc_lib} -labsl_flags_usage
-LIBS += -L$${grpc_lib} -labsl_flags_usage_internal
-LIBS += -L$${grpc_lib} -labsl_graphcycles_internal
-LIBS += -L$${grpc_lib} -labsl_hash
-LIBS += -L$${grpc_lib} -labsl_hashtablez_sampler
-LIBS += -L$${grpc_lib} -labsl_int128
-LIBS += -L$${grpc_lib} -labsl_leak_check
-LIBS += -L$${grpc_lib} -labsl_log_severity
-LIBS += -L$${grpc_lib} -labsl_low_level_hash
-LIBS += -L$${grpc_lib} -labsl_malloc_internal
-LIBS += -L$${grpc_lib} -labsl_periodic_sampler
-LIBS += -L$${grpc_lib} -labsl_random_distributions
-LIBS += -L$${grpc_lib} -labsl_random_internal_distribution_test_util
-LIBS += -L$${grpc_lib} -labsl_random_internal_platform
-LIBS += -L$${grpc_lib} -labsl_random_internal_pool_urbg
-LIBS += -L$${grpc_lib} -labsl_random_internal_randen
-LIBS += -L$${grpc_lib} -labsl_random_internal_randen_hwaes
-LIBS += -L$${grpc_lib} -labsl_random_internal_randen_hwaes_impl
-LIBS += -L$${grpc_lib} -labsl_random_internal_randen_slow
-LIBS += -L$${grpc_lib} -labsl_random_internal_seed_material
-LIBS += -L$${grpc_lib} -labsl_random_seed_gen_exception
-LIBS += -L$${grpc_lib} -labsl_random_seed_sequences
-LIBS += -L$${grpc_lib} -labsl_raw_hash_set
-LIBS += -L$${grpc_lib} -labsl_raw_logging_internal
-LIBS += -L$${grpc_lib} -labsl_scoped_set_env
-LIBS += -L$${grpc_lib} -labsl_spinlock_wait
-LIBS += -L$${grpc_lib} -labsl_stacktrace
-LIBS += -L$${grpc_lib} -labsl_status
-LIBS += -L$${grpc_lib} -labsl_statusor
-LIBS += -L$${grpc_lib} -labsl_strerror
-LIBS += -L$${grpc_lib} -labsl_str_format_internal
-LIBS += -L$${grpc_lib} -labsl_strings
-LIBS += -L$${grpc_lib} -labsl_strings_internal
-LIBS += -L$${grpc_lib} -labsl_symbolize
-LIBS += -L$${grpc_lib} -labsl_synchronization
-LIBS += -L$${grpc_lib} -labsl_throw_delegate
-LIBS += -L$${grpc_lib} -labsl_time
-LIBS += -L$${grpc_lib} -labsl_time_zone
-LIBS += -L$${grpc_lib} -laddress_sorting
-LIBS += -L$${grpc_lib} -lcares
-LIBS += -L$${grpc_lib} -lcrypto
-LIBS += -L$${grpc_lib} -lgpr
-LIBS += -L$${grpc_lib} -lgrpc++
-LIBS += -L$${grpc_lib} -lgrpc
-LIBS += -L$${grpc_lib} -lgrpc++_alts
-LIBS += -L$${grpc_lib} -lgrpc++_error_details
-LIBS += -L$${grpc_lib} -lgrpc_plugin_support
-LIBS += -L$${grpc_lib} -lgrpcpp_channelz
-LIBS += -L$${grpc_lib} -lgrpc++_reflection
-LIBS += -L$${grpc_lib} -lgrpc++_unsecure
-LIBS += -L$${grpc_lib} -lgrpc_unsecure
-LIBS += -L$${grpc_lib} -lprotobuf
-LIBS += -L$${grpc_lib} -lprotobuf-lite
-LIBS += -L$${grpc_lib} -lprotoc
-LIBS += -L$${grpc_lib} -lre2
-LIBS += -L$${grpc_lib} -lssl
-LIBS += -L$${grpc_lib} -lupb
-LIBS += -L$${grpc_lib} -lz
+LIBS += -L$${grpc_lib} \
+    -lgrpc++_unsecure \
+    -lgrpc++_reflection \
+    -lgrpc++_error_details \
+    -lgrpc++_alts \
+    -lgrpc_plugin_support \
+    -lgrpcpp_channelz \
+    -lgrpc_unsecure \
+    -lgrpc \
+    -laddress_sorting \
+    -lcares \
+    -lprotobuf \
+    -lprotobuf-lite \
+    -lprotoc \
+    -lre2 \
+    -lupb \
+    -labsl_cordz_info \
+    -labsl_cordz_sample_token \
+    -labsl_cordz_handle \
+    -labsl_cordz_functions \
+    -labsl_cord_internal \
+    -labsl_cord \
+    -labsl_stacktrace \
+    -labsl_civil_time \
+    -labsl_time_zone \
+    -labsl_time \
+    -labsl_examine_stack \
+    -labsl_symbolize \
+    -labsl_hash \
+    -labsl_strings \
+    -labsl_str_format_internal \
+    -labsl_strings_internal \
+    -labsl_periodic_sampler \
+    -labsl_exponential_biased \
+    -labsl_random_distributions \
+    -labsl_random_internal_distribution_test_util \
+    -labsl_random_internal_platform \
+    -labsl_random_internal_pool_urbg \
+    -labsl_random_internal_randen \
+    -labsl_random_internal_randen_hwaes \
+    -labsl_random_internal_randen_hwaes_impl \
+    -labsl_random_internal_randen_slow \
+    -labsl_random_internal_seed_material \
+    -labsl_random_seed_gen_exception \
+    -labsl_random_seed_sequences \
+    -labsl_log_severity \
+    -labsl_strerror \
+    -labsl_status \
+    -labsl_statusor \
+    -labsl_throw_delegate \
+    -labsl_failure_signal_handler \
+    -labsl_leak_check \
+    -labsl_demangle_internal \
+    -labsl_debugging_internal \
+    -labsl_graphcycles_internal \
+    -labsl_spinlock_wait \
+    -labsl_synchronization \
+    -labsl_base \
+    -labsl_malloc_internal \
+    -labsl_low_level_hash \
+    -labsl_raw_logging_internal \
+    -labsl_raw_hash_set \
+    -labsl_flags \
+    -labsl_flags_commandlineflag \
+    -labsl_flags_commandlineflag_internal \
+    -labsl_flags_config \
+    -labsl_flags_internal \
+    -labsl_flags_marshalling \
+    -labsl_flags_parse \
+    -labsl_flags_private_handle_accessor \
+    -labsl_flags_program_name \
+    -labsl_flags_reflection \
+    -labsl_flags_usage \
+    -labsl_flags_usage_internal \
+    -lssl \
+    -lcrypto \
+    -lgpr \
+    -lz
 
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_bad_any_cast_impl.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_bad_optional_access.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_bad_variant_access.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_base.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_city.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_civil_time.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_cord.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_cord_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_cordz_functions.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_cordz_handle.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_cordz_info.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_cordz_sample_token.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_debugging_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_demangle_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_examine_stack.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_exponential_biased.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_failure_signal_handler.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_commandlineflag.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_commandlineflag_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_config.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_marshalling.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_parse.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_private_handle_accessor.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_program_name.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_reflection.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_usage.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_flags_usage_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_graphcycles_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_hash.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_hashtablez_sampler.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_int128.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_leak_check.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_log_severity.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_low_level_hash.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_malloc_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_periodic_sampler.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_distributions.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_distribution_test_util.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_platform.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_pool_urbg.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_randen.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_randen_hwaes.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_randen_hwaes_impl.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_randen_slow.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_internal_seed_material.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_seed_gen_exception.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_random_seed_sequences.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_raw_hash_set.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_raw_logging_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_scoped_set_env.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_spinlock_wait.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_stacktrace.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_status.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_statusor.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_strerror.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_str_format_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_strings.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_strings_internal.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_symbolize.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_synchronization.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_throw_delegate.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_time.a
-PRE_TARGETDEPS += $${grpc_lib}/libabsl_time_zone.a
-PRE_TARGETDEPS += $${grpc_lib}/libaddress_sorting.a
-PRE_TARGETDEPS += $${grpc_lib}/libcares.a
-PRE_TARGETDEPS += $${grpc_lib}/libcrypto.a
-PRE_TARGETDEPS += $${grpc_lib}/libgpr.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc++.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc++_alts.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc++_error_details.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc_plugin_support.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpcpp_channelz.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc++_reflection.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc++_unsecure.a
-PRE_TARGETDEPS += $${grpc_lib}/libgrpc_unsecure.a
-PRE_TARGETDEPS += $${grpc_lib}/libprotobuf.a
-PRE_TARGETDEPS += $${grpc_lib}/libprotobuf-lite.a
-PRE_TARGETDEPS += $${grpc_lib}/libprotoc.a
-PRE_TARGETDEPS += $${grpc_lib}/libre2.a
-PRE_TARGETDEPS += $${grpc_lib}/libssl.a
-PRE_TARGETDEPS += $${grpc_lib}/libupb.a
-PRE_TARGETDEPS += $${grpc_lib}/libz.a
 
-message($${grpc_root_dir})
 message($${grpc_lib})
 message($$LIBS)
